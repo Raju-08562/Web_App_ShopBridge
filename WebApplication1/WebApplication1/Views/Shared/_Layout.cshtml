@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ShopBridge</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <div class="navbar-brand">
+                @Html.ActionLink("ShopBridge", "Index", "Home", new { area = "" }, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+
+    <div class=".form-inline">
+        <div class="container">
+            <div class="navbar-brand">
+                @Html.ActionLink("INVENTORY", "Index", "Inventory", new { area = "" }, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container body-content">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Shop Bridge </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
